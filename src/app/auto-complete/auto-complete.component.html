@@ -1,0 +1,89 @@
+
+<h2>Auto Complete</h2>
+<p>The autocomplete is a normal text input enhanced by a panel of suggested options.</p>
+<h4>Lets Start with Simple example for </h4>
+<h5>Appearance : Outline</h5>
+
+<mat-accordion>
+      <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+
+
+                  <mat-expansion-panel-header>
+                        <mat-panel-title>
+                Click To see Example of Outlined Form Field
+                        </mat-panel-title>
+                        <mat-panel-description>
+                             
+                        </mat-panel-description>
+                        </mat-expansion-panel-header>
+                
+                        <form class="example-form">
+                              <mat-form-field class="example-full-width" appearance="outline" style="display: flex;">
+                                    <mat-label>Select An Anime From The List</mat-label>
+                                    <input type="text" placeholder=" " aria-label="Select Anime's From The List" matInput
+                                          [formControl]="myControl" [matAutocomplete]="auto" style="height:50px ;">
+                                    <mat-icon>arrow_drop_down</mat-icon>
+                                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                          <mat-option *ngFor="let option of (filteredOptions | async)" [value]="option">
+                                                {{ option }}
+                                          </mat-option>
+                                    </mat-autocomplete>
+                              </mat-form-field>
+                        </form>
+               
+
+      </mat-expansion-panel>
+</mat-accordion>
+
+<h5>Appearance : Fill</h5>
+
+
+<mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+
+
+            <mat-expansion-panel-header>
+                  <mat-panel-title>
+                        Click To see Example of Filled Form Field
+                  </mat-panel-title>
+                  <mat-panel-description>
+
+                  </mat-panel-description>
+            </mat-expansion-panel-header>
+            <form class="example-form">
+                  <mat-form-field class="example-full-width" appearance="fill" style="display: flex;">
+                        <mat-label style="padding-right:290px">Select An Anime From The List</mat-label>
+                        <input type="text" placeholder=" " aria-label="Select Anime's From The List" matInput
+                              [formControl]="myControlSecond" [matAutocomplete]="auto" style="height:50px ;">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                              <mat-option *ngFor="let option of (filteredOptions | async)" [value]="option">
+                                    {{ option }}
+                              </mat-option>
+                        </mat-autocomplete>
+                  </mat-form-field>
+            </form>
+
+
+      </mat-expansion-panel>
+</mat-accordion>
+
+<h4>Adding a custom filter</h4>
+<p>At this point, the autocomplete panel should be toggleable on focus and options should be selectable. But if we want our
+options to filter when we type, we need to add a custom filter.
+
+You can filter the options in any way you like based on the text input*. Here we will perform a simple string test on
+the option value to see if it matches the input value, starting from the option's first letter. We already have access
+to the built-in valueChanges Observable on the FormControl, so we can simply map the text input's values to the
+suggested options by passing them through this filter. The resulting Observable, filteredOptions, can be added to the
+template in place of the options property using the async pipe.
+
+Below we are also priming our value change stream with an empty string so that the options are filtered by that value on
+init (before there are any value changes).
+
+*For optimal accessibility, you may want to consider adding text guidance on the page to explain filter criteria. This
+is especially helpful for screenreader users if you're using a non-standard filter that doesn't limit matches to the
+beginning of the string.</p>
+<h5>Note :  The legacy and standard appearances were removed.</h5>
+
+

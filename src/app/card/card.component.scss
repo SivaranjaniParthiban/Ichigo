@@ -1,0 +1,110 @@
+
+
+
+
+mat-mdc-card-subtitle.mat-mdc-card-title,
+.mat-mdc-card-title ~ .mat-mdc-card-subtitle,
+.mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-title,
+.mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-subtitle,
+.mat-mdc-card-title-group .mat-mdc-card-title,
+.mat-mdc-card-title-group .mat-mdc-card-subtitle {
+  padding-top: 17px !important;
+}
+
+.mat-mdc-card-header {
+  background-color: whitesmoke !important;
+  padding: 0px 10px 0px;
+}
+
+::ng-deep .mat-mdc-card-header-text {
+  // background-color: burlywood !important;
+  width: max-content;
+}
+
+
+
+
+.mat-mdc-card{
+width:90vw;
+}
+
+// .profile-card{
+//   @include mat.elevation-transition();
+//   @include mat.elevation(2);
+
+//   & :hover {
+//     @include mat.elevation(8);
+//   }
+// }
+
+
+.animate{
+  animation: fadeInAnimation ease-in-out 0s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                
+            }
+
+            50% {
+                opacity: 1;
+                z-index: 998;
+            }
+        }
+
+
+        
+.animate2{
+  animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+        .animate3{
+  animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+        .animate4{
+  animation: fadeInAnimation ease-in-out 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+          
+            }
+        }

@@ -1,0 +1,18 @@
+.mat-button-toggle-group {
+background-color: bisque;
+box-shadow: 4px 4px 2px 1px black !important ;
+}
+.mat-button-toggle{
+    background-color:bisque;
+    color:black;
+}
+
+.mat-button-toggle:hover {
+    background-color: transparent;
+    color:chocolate
+}
+
+.mat-button-toggle-checked {
+    background-color: chocolate !important;
+    color: #000000 !important;
+}
