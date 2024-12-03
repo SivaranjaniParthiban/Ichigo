@@ -60,7 +60,7 @@ width:92vw;
 
         
 .animate2{
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 2.5s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
@@ -70,7 +70,7 @@ width:92vw;
                 opacity: 0;
             }
 
-            100% {
+            50% {
                 opacity: 1;
                              
                              
@@ -145,3 +145,9 @@ width:92vw;
     justify-content: space-around;
 }
 
+@media screen and (max-width:500px){
+.mat-mdc-card{
+width:82vw !important;
+}
+
+}
