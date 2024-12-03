@@ -13,7 +13,7 @@ mat-mdc-card-subtitle.mat-mdc-card-title,
 
 .mat-mdc-card-header {
   background-color: whitesmoke !important;
-  padding: 0px 10px 0px;
+  padding: 10px 10px 0px ;
 }
 
 ::ng-deep .mat-mdc-card-header-text {
@@ -25,7 +25,7 @@ mat-mdc-card-subtitle.mat-mdc-card-title,
 
 
 .mat-mdc-card{
-width:90vw;
+width:92vw;
 }
 
 // .profile-card{
@@ -38,10 +38,11 @@ width:90vw;
 // }
 
 
+
 .animate{
   animation: fadeInAnimation ease-in-out 0s;
             animation-iteration-count: 1;
-            animation-fill-mode: backwards;
+            animation-fill-mode:forwards;
         }
 
         @keyframes fadeInAnimation {
@@ -52,7 +53,7 @@ width:90vw;
 
             50% {
                 opacity: 1;
-                z-index: 998;
+           
             }
         }
 
@@ -69,8 +70,10 @@ width:90vw;
                 opacity: 0;
             }
 
-            50% {
+            100% {
                 opacity: 1;
+                             
+                             
             }
         }
 
@@ -79,6 +82,7 @@ width:90vw;
   animation: fadeInAnimation ease 3s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+
         }
 
         @keyframes fadeInAnimation {
@@ -90,6 +94,16 @@ width:90vw;
                 opacity: 1;
             }
         }
+
+
+        @mixin transformation{
+            transform: scale3d(1.03, 1, 1);
+             transition: 400ms;
+        }
+
+.animate3:hover , .animate:hover , .animate2:hover ,.animate4:hover{
+@include transformation;
+}
 
 
         .animate4{
@@ -108,3 +122,26 @@ width:90vw;
           
             }
         }
+
+
+// ::ng-deep .mdc-card mat-elevation-z8{
+
+    
+// box-shadow:0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+// }
+
+.mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8{
+    box-shadow:0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.mat-elevation-z9, .mat-mdc-elevation-specific.mat-elevation-z9{
+  box-shadow: 5px 31px 18px -3px rgba(0, 0, 0, 0.2), 14px 18px 15px 13px rgba(0, 0, 0, 0.14), 13px 14px 20px -29px rgba(0, 0, 0, 0.12) !important
+}
+
+.animebutton{
+    padding-top:20px;
+    display:flex;
+    flex-grow:1;
+    justify-content: space-around;
+}
+

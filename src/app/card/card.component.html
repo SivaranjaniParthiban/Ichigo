@@ -1,85 +1,235 @@
+<div class="animebutton">
 
-<button mat-button (click)="showPanel()">Show Panel </button>
-
-<div *ngIf="showpanel">
-<mat-card>
-<div style="display:flex;flex-direction:column;">
-      <div style="padding-bottom:10px"  class="animate"  ><mat-card class="profile-card"><mat-card-header>
-
-                        <mat-card-title> Bleach</mat-card-title>
-                        <mat-card-subtitle>Soul Society</mat-card-subtitle>
-                        <mat-card-content>
-                              <h5>The expansion-panel aims to mimic the experience of the native details and summary
-                                    elements. The expansion panel
-                                    header has role="button" and also the attribute aria-controls with the expansion
-                                    panel's id as value.
-
-                                    The expansion panel headers are buttons. Users can use the keyboard to activate the
-                                    expansion panel header
-                                    to switch between expanded state and collapsed state. Because the header acts as a
-                                    button, additional
-                                    interactive elements should not be put inside of the header.</h5>
-                        </mat-card-content>
-                  </mat-card-header></mat-card>
-      </div>
-      <div style="padding-bottom:10px" class="animate2">
-            <mat-card><mat-card-header><mat-card-title> One Piece</mat-card-title>
-                        <mat-card-subtitle>Pirates </mat-card-subtitle>
-                        <mat-card-content>
-                              <h5>The expansion-panel aims to mimic the experience of the native details and summary
-                                    elements. The expansion
-                                    panel
-                                    header has role="button" and also the attribute aria-controls with the expansion
-                                    panel's id as value.
-
-                                    The expansion panel headers are buttons. Users can use the keyboard to activate the
-                                    expansion panel header
-                                    to switch between expanded state and collapsed state. Because the header acts as a
-                                    button, additional
-                                    interactive elements should not be put inside of the header.</h5>
-                        </mat-card-content>
-                  </mat-card-header>
-            </mat-card>
-      </div>
-      <div style="padding-bottom:10px" class="animate3">
-            <mat-card><mat-card-header><mat-card-title> Demon Slayer</mat-card-title>
-                        <mat-card-subtitle>Hashira</mat-card-subtitle>
-
-                        <mat-card-content>
-                              <h5>The expansion-panel aims to mimic the experience of the native details and summary
-                                    elements. The expansion
-                                    panel
-                                    header has role="button" and also the attribute aria-controls with the expansion
-                                    panel's id as value.
-
-                                    The expansion panel headers are buttons. Users can use the keyboard to activate the
-                                    expansion panel header
-                                    to switch between expanded state and collapsed state. Because the header acts as a
-                                    button, additional
-                                    interactive elements should not be put inside of the header.</h5>
-                        </mat-card-content></mat-card-header></mat-card>
-      </div>
-
-      <div style="padding-bottom:10px" class="animate4">
-            <mat-card><mat-card-header><mat-card-title>Jujutsu Kaisen</mat-card-title>
-                        <mat-card-subtitle>Curse</mat-card-subtitle>
-
-                        <mat-card-content>
-                              <h5>The expansion-panel aims to mimic the experience of the native details and summary
-                                    elements. The expansion
-                                    panel
-                                    header has role="button" and also the attribute aria-controls with the expansion
-                                    panel's id as value.
-
-                                    The expansion panel headers are buttons. Users can use the keyboard to activate the
-                                    expansion panel header
-                                    to switch between expanded state and collapsed state. Because the header acts as a
-                                    button, additional
-                                    interactive elements should not be put inside of the header.</h5>
-                        </mat-card-content></mat-card-header></mat-card>
-
-      </div>
-
+<button mat-raised-button (click)="showPanel()">Click On Me To find the Anime Details</button>
+<button mat-raised-button (click)="characterPanel()">Click  On Me To find the Character Details</button>
 </div>
-</mat-card>
+
+
+
+
+<div *ngIf="characterpanel" style="padding-top:3vw">
+      <mat-card class="outercard  mat-elevation-z9">
+            <div style="display:flex;flex-direction:column;">
+                  <div style="padding-bottom:10px" class="animate"><mat-card class="mat-elevation-z8"><mat-card-header>
+
+                                    <mat-card-title> Bleach</mat-card-title>
+                                    <mat-card-subtitle (click)="ichiClick()">Ichigo</mat-card-subtitle>
+
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content>
+                              </mat-card-header></mat-card>
+                  </div>
+                  <div style="padding-bottom:10px" class="animate2">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title> One Piece</mat-card-title>
+                                    <mat-card-subtitle>Luffy</mat-card-subtitle>
+                                    <div style="padding:8px"></div>
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content>
+                              </mat-card-header>
+                        </mat-card>
+                  </div>
+                  <div style="padding-bottom:10px" class="animate3">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title> Demon
+                                          Slayer</mat-card-title>
+                                    <mat-card-subtitle>Hashira</mat-card-subtitle>
+
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content></mat-card-header></mat-card>
+                  </div>
+
+                  <div style="padding-bottom:0px" class="animate4">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title>Jujutsu
+                                          Kaisen</mat-card-title>
+                                    <mat-card-subtitle>Curse</mat-card-subtitle>
+
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content></mat-card-header></mat-card>
+
+                  </div>
+
+            </div>
+      </mat-card>
+</div>
+<div *ngIf="showpanel" style="padding-top:3vw">
+      <mat-card class="outercard  mat-elevation-z9">
+            <div style="display:flex;flex-direction:column;">
+                  <div style="padding-bottom:10px" class="animate"><mat-card class="mat-elevation-z8"><mat-card-header>
+
+                                    <mat-card-title> Bleach</mat-card-title>
+                                    <mat-card-subtitle>Soul Society</mat-card-subtitle>
+                                  
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content>
+                              </mat-card-header></mat-card>
+                  </div>
+                  <div style="padding-bottom:10px" class="animate2">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title> One Piece</mat-card-title>
+                                    <mat-card-subtitle>Pirates </mat-card-subtitle>
+                                    <div style="padding:8px"></div>
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content>
+                              </mat-card-header>
+                        </mat-card>
+                  </div>
+                  <div style="padding-bottom:10px" class="animate3">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title> Demon Slayer</mat-card-title>
+                                    <mat-card-subtitle>Hashira</mat-card-subtitle>
+
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content></mat-card-header></mat-card>
+                  </div>
+
+                  <div style="padding-bottom:10px" class="animate4">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title>Jujutsu Kaisen</mat-card-title>
+                                    <mat-card-subtitle>Curse</mat-card-subtitle>
+
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content></mat-card-header></mat-card>
+
+                  </div>
+
+
+                  <div style="padding-bottom:0px" class="animate4">
+                        <mat-card class="mat-elevation-z8"><mat-card-header><mat-card-title>Death Note</mat-card-title>
+                                    <mat-card-subtitle>Curse</mat-card-subtitle>
+                  
+                                    <mat-card-content>
+                                          <h5>The expansion-panel aims to mimic the experience of the native details and
+                                                summary
+                                                elements. The expansion
+                                                panel
+                                                header has role="button" and also the attribute aria-controls with the
+                                                expansion
+                                                panel's id as value.
+                  
+                                                The expansion panel headers are buttons. Users can use the keyboard to
+                                                activate the
+                                                expansion panel header
+                                                to switch between expanded state and collapsed state. Because the header
+                                                acts as a
+                                                button, additional
+                                                interactive elements should not be put inside of the header.</h5>
+                                    </mat-card-content></mat-card-header></mat-card>
+                  
+                  </div>
+
+            </div>
+      </mat-card>
 </div>

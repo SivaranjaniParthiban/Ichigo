@@ -32,6 +32,7 @@ import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,8 +72,9 @@ import { MatCardModule } from '@angular/material/card';
     MatBottomSheetModule,
     MatButtonToggleModule,
     MatCardModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent,CardComponent],
+  bootstrap: [AppComponent, CardComponent],
 })
 export class AppModule {}

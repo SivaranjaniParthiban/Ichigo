@@ -41,3 +41,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mdc-list-item.mdc-list-item--with-one-line{
         --mdc-list-list-item-one-line-container-height: none !important;
 }
+
+
+@media screen and (max-width:500){
+    .page-content{
+        margin: 15px  !important;;
+    }
+}
