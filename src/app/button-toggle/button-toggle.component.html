@@ -1,33 +1,54 @@
-<p>Single Select!</p>
-<p>
-      Bleach Cast :
-      <mat-button-toggle-group #group="matButtonToggleGroup" appearance="legacy" name="fontStyle"
-            aria-label="Font Style">
-            <mat-button-toggle value="Ichigo">Ichigo</mat-button-toggle>
-            <mat-button-toggle value="Aizen">Aizen</mat-button-toggle>
-            <mat-button-toggle value="Kyoraku">Kyoraku</mat-button-toggle>
-            <mat-button-toggle value="Kenpachi">Kenpachi</mat-button-toggle>
-            <mat-button-toggle value="Byakuya">Byakuya</mat-button-toggle>
-      </mat-button-toggle-group>
-</p>
+<div style="display:flex">
+      <div>
+                                    <p>Single Select!
+                                    </p>
+
+                                    Bleach Cast :
+                                    <p>
+                                                <mat-button-toggle-group #bleach="matButtonToggleGroup" appearance="legacy" style="width:30vw">
+                                                <mat-button-toggle value="Ichigo">Ichigo</mat-button-toggle>
+                                                <mat-button-toggle value="Aizen">Aizen</mat-button-toggle>
+                                                <mat-button-toggle value="Kyoraku">Kyoraku</mat-button-toggle>
+                                                <mat-button-toggle value="Kenpachi">Kenpachi</mat-button-toggle>
+                                                <mat-button-toggle value="Byakuya">Byakuya</mat-button-toggle>
+                                                </mat-button-toggle-group>
+                                    </p>
+
+                                    One Piece Cast :
+                                    <p>
+                                                <mat-button-toggle-group #onepiece="matButtonToggleGroup" appearance="legacy"  style="width:30vw">
+                                                <mat-button-toggle value="Luffy">Luffy</mat-button-toggle>
+                                                <mat-button-toggle value="Sanji">Sanji</mat-button-toggle>
+                                                <mat-button-toggle value="Ace">Ace</mat-button-toggle>
+                                                <mat-button-toggle value="Zoro">Zoro</mat-button-toggle>
+                                                <mat-button-toggle value="Chopper">Chopper</mat-button-toggle>
+                                                </mat-button-toggle-group>
+                                    </p>
+
+                                    Multiple Select !
+                                    <p>
+                                                <mat-button-toggle-group #groups="matButtonToggleGroup" appearance="legacy"  style="width:30vw" multiple>
+                                                <mat-button-toggle value="Ichigo">Ichigo</mat-button-toggle>
+                                                <mat-button-toggle value="Aizen">Aizen</mat-button-toggle>
+                                                <mat-button-toggle value="Kyoraku">Kyoraku</mat-button-toggle>
+                                                <mat-button-toggle value="Kenpachi">Kenpachi</mat-button-toggle>
+                                                <mat-button-toggle value="Byakuya">Byakuya</mat-button-toggle>
+                                                </mat-button-toggle-group>
+                                          </p>
+      </div>
+                              <div>
+                                    <h3 *ngIf="bleach.value=== 'Ichigo' ">Ban - Kai Tensa Zangetsu</h3>
+                                    <h3 *ngIf="bleach.value=== 'Aizen' ">Yokoso Watashi no Soul Society Yare Yare !</h3>
+                                    <h3 *ngIf="bleach.value=== 'Kyoraku' "> Bankai Katen Kyokatsu Karamatsu Shinju</h3>
+                                    <h3 *ngIf="bleach.value=== 'Kenpachi' ">Arrrrrrrrrr</h3>
+                                    <h3 *ngIf="bleach.value=== 'Byakuya' "> Bankai Senbonzakura Kageyoshi</h3>
+                                    <h3 *ngIf="onepiece.value=== 'Luffy' ">Ban - Kai Tensa Zangetsu</h3>
+                                    <h3 *ngIf="onepiece.value=== 'Sanji' ">Yokoso Watashi no Soul Society Yare Yare !</h3>
+                                    <h3 *ngIf="onepiece.value=== 'Ace' "> Bankai Katen Kyokatsu Karamatsu Shinju</h3>
+                                    <h3 *ngIf="onepiece.value=== 'Zoro' ">Arrrrrrrrrr</h3>
+                                    <h3 *ngIf="onepiece.value=== 'Chopper' "> Bankai Senbonzakura Kageyoshi</h3>
+                                    <h3>{{groups.value}}</h3>
+                              </div>
+</div>
 
 
-<h3 *ngIf="group.value=== 'Ichigo' ">Ban - Kai Tensa Zangetsu</h3>
-<h3 *ngIf="group.value=== 'Aizen' ">Yokoso Watashi no Soul Society Yare Yare !</h3>
-<h3 *ngIf="group.value=== 'Kyoraku' "> Bankai Katen Kyokatsu Karamatsu Shinju</h3>
-<h3 *ngIf="group.value=== 'Kenpachi' ">Arrrrrrrrrr</h3>
-<h3 *ngIf="group.value=== 'Byakuya' "> Bankai Senbonzakura Kageyoshi</h3>
-
-Multiple Select !
-
-
-
-<mat-button-toggle-group #groups="matButtonToggleGroup" appearance="legacy" name="fontStyle" aria-label="Font Style" multiple>
-      <mat-button-toggle value="Ichigo">Ichigo</mat-button-toggle>
-      <mat-button-toggle value="Aizen">Aizen</mat-button-toggle>
-      <mat-button-toggle value="Kyoraku">Kyoraku</mat-button-toggle>
-      <mat-button-toggle value="Kenpachi">Kenpachi</mat-button-toggle>
-      <mat-button-toggle value="Byakuya">Byakuya</mat-button-toggle>
-
-</mat-button-toggle-group>
-<h3>{{groups.value}}</h3>
