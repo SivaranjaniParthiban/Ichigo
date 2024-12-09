@@ -1,47 +1,47 @@
 <mat-nav-list>
-<mat-list-item>
-   <a routerLink="accordion">
-      <div  class="accordion-button" (click)="collapseMenu()">
-           <span class="nav-caption">Accordion</span>
-      </div>
-</a>
-      <div class="spacer">
-            <span ></span>
-      </div>
+      <mat-list-item>
+            <a routerLink="accordion">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Accordion</span>
+                  </div>
+            </a>
+            <div class="spacer">
+                  <span></span>
+            </div>
 
-      <a routerLink="autocomplete">
-      <div class="accordion-button" (click)="collapseMenu()">
-            <span class="nav-caption">Auto Complete</span>
-      </div>
-      </a>
+            <a routerLink="autocomplete">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Auto Complete</span>
+                  </div>
+            </a>
 
 
-      <div class="spacer">
-            <span></span>
-      </div>
+            <div class="spacer">
+                  <span></span>
+            </div>
 
-      <a routerLink="badge">
-      <div class="accordion-button" (click)="collapseMenu()">
-            <span class="nav-caption">Badge</span>
-      </div>
+            <a routerLink="badge">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Badge</span>
+                  </div>
 
-      </a>
-      <div class="spacer">
-            <span></span>
-      </div>
-      <a routerLink="bottom-sheet">
-      <div class="accordion-button" (click)="collapseMenu()">
-            <span class="nav-caption">Bottom Sheet</span>
-      </div>
-      </a>
-      <div class="spacer">
-            <span></span>
-      </div>
-      <a routerLink="button">
-      <div class="accordion-button" (click)="collapseMenu()">
-            <span class="nav-caption">Button</span>
-      </div>
-      </a>
+            </a>
+            <div class="spacer">
+                  <span></span>
+            </div>
+            <a routerLink="bottom-sheet">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Bottom Sheet</span>
+                  </div>
+            </a>
+            <div class="spacer">
+                  <span></span>
+            </div>
+            <a routerLink="button">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Button</span>
+                  </div>
+            </a>
             <div class="spacer">
                   <span></span>
             </div>
@@ -50,16 +50,22 @@
                         <span class="nav-caption">Button Toggle</span>
                   </div>
             </a>
-                  <div class="spacer">
-                        <span></span>
+            <div class="spacer">
+                  <span></span>
+            </div>
+            <a routerLink="card">
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption">Card</span>
                   </div>
-                  <a routerLink="card">
-                        <div class="accordion-button" (click)="collapseMenu()">
-                              <span class="nav-caption">Card</span>
-                        </div>
-                  </a>
-</mat-list-item>
+            </a>
+            <div class="spacer">
+                  <span></span>
+            </div>
+            <a>
+                  <div class="accordion-button" (click)="collapseMenu()">
+                        <span class="nav-caption" (click)="logout()">Logout</span>
+                  </div>
+            </a>
+            <!-- <button (click)="logout()">Logout</button> -->
+      </mat-list-item>
 </mat-nav-list>
-
-
-

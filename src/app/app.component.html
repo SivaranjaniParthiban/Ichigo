@@ -1,20 +1,50 @@
-<div class="app-container">
-  <div class="app-content">
-    <div class="app-header">
-      <app-header [expanded]="expandedEvent" (changedExpanded)="changedExpanded($event)"></app-header>
-    </div>
-    <mat-drawer-container autosize="true" [hasBackdrop]="hasBackdrop" (backdropClick)="backdropClicked();">
-      <mat-drawer #drawer mode="over" disableClose="true" opened="true" [@openClose]="expanded ? 'open' : 'closed'">
-        <app-menu #appMenu [expanded]="expandedEvent" (changedExpanded)="changedExpanded($event)"></app-menu>
-      </mat-drawer>
-      <mat-drawer-content>
-        <!-- <div #pageTitle class="page-title">
+<div *ngIf="userdetails; else showLogin">
+  <div class="app-container">
+    <div class="app-content">
+      <div class="app-header">
+        <app-header [expanded]="expandedEvent" (changedExpanded)="changedExpanded($event)"></app-header>
+      </div>
+      <mat-drawer-container autosize="true" [hasBackdrop]="hasBackdrop" (backdropClick)="backdropClicked();">
+        <mat-drawer #drawer mode="over" disableClose="true" opened="true" [@openClose]="expanded ? 'open' : 'closed'">
+          <app-menu #appMenu [expanded]="expandedEvent" (changedExpanded)="changedExpanded($event)"></app-menu>
+        </mat-drawer>
+        <mat-drawer-content>
+          <!-- <div #pageTitle class="page-title">
           <app-breadcrumb></app-breadcrumb>
         </div> -->
-        <div #pageContent class="page-content">
-          <router-outlet></router-outlet>
-        </div>
-      </mat-drawer-content>
-    </mat-drawer-container>
+          <div #pageContent class="page-content">
+            <router-outlet></router-outlet>
+          </div>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>
   </div>
+
+</div>
+
+
+
+<ng-template #showLogin>
+
+  <body class="web">
+    <div class="login">
+      <h1>Login With Google </h1>
+      <button mat-stroked-button (click)="login()" style="color:white;border: ridge;" class="signin">Sign In</button>
+    </div>
+  </body>
+
+  <!-- <p style="background-color: black;">Please login.</p>
+-->
+</ng-template>
+<div class="bird-container bird-container-one">
+  <div class="bird bird-one"></div>
+</div>
+<div class="bird-container bird-container-two">
+  <div class="bird bird-two"></div>
+</div>
+<div class="bird-container bird-container-three">
+  <div class="bird bird-three"></div>
+</div>
+<div class="bird-container bird-container-four">
+  <div class="bird bird-four"></div>
 </div>

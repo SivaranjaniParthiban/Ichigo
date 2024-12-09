@@ -9,6 +9,7 @@ import { ButtonComponent } from './button/button.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { CardComponent } from './card/card.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -42,12 +43,14 @@ const routes: Routes = [
   },
   {
     path: 'card',
-    component:CardComponent,
+    component: CardComponent,
   },
   // {
   //   path: '',
   //   component: AppComponent,
   // },
+
+
 ];
 
 @NgModule({

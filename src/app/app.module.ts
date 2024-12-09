@@ -26,13 +26,26 @@ import { CommonModule } from '@angular/common';
 import { BadgeComponent } from './badge/badge.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
-import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { ButtonComponent } from './button/button.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
+var config = {
+  apiKey: 'AIzaSyDZDD3oXXVW66Sl_WBt_XfylF_0qDhuCzM',
+  authDomain: 'tony-ee200.firebaseapp.com',
+  projectId: 'tony-ee200',
+  storageBucket: 'tony-ee200.firebasestorage.app',
+  messagingSenderId: '800386993805',
+  appId: '1:800386993805:web:9efb6f8328f23e192d9cc4',
+  measurementId: 'G-XQJZM3Q7S4',
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +86,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonToggleModule,
     MatCardModule,
     MatDialogModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent, CardComponent],

@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { map, share, timer } from 'rxjs';
 
 @Component({
@@ -12,6 +13,9 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
   isExpanded = false;
   subscription: any;
   rxTime = new Date();
+  user: any;
+  userdetails: any;
+
 
   ngAfterViewInit(): void {
     this.expanded.subscribe((val) => {
@@ -43,4 +47,6 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
       this.changedExpanded.next(false);
     }
   }
+
+
 }
